@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+	<meta charset="UTF-8">
+	<title>点名</title>
+	<style type="text/css">
+		.olinr {
+			font-family: 黑体;
+			background: #66ccff;
+			color: #ee0000;
+			font-size: 100px;
+		}
+	</style>
+</head>
+ 
+<body>
+	<div class="content">
+		<center>
+		<h1>
+			高一点名器
+		</h1>
+		</center>
+		<center>
+			<input type="button" name="" id="button" class="button" value="开始" onclick="toStart(this)">
+		<center>
+		<div class="olinr" id="olinr">
+			崔家贺
+		</div>
+		
+		
+	</div>
+</body>
+<script type="text/javascript">
+	var timer;
+	var button = document.querySelector("#button");
+	function chenge() {
+		var str = new Array (
+				"任伯宇","史佳朋","吴艺超","赵淼桐","孙少卓","齐扬帆","郑宇晗",
+				"刘寿江","王昊轩","袁佳腾","杨耀冲","周浩楠","孙国庆","葛虎尧",
+				"常皓然","冯世杰","孙培博","刘新宇","王曦琛","王政奥","张泽宇",
+				"谷文涛","耿宇卓","马凯","李鑫","王文子正",
+				
+				"崔晋宁","宋悦荣","赵启浩","郭秉霖","卢培钰","周家鑫","王博韬","郝一鹏","张学骞","王英吉","张超",
+				"崔晋宁","宋悦荣","赵启浩","郭秉霖","卢培钰","周家鑫","王博韬","郝一鹏","张学骞","王英吉","张超",
+				"崔晋宁","宋悦荣","赵启浩","郭秉霖","卢培钰","周家鑫","王博韬","郝一鹏","张学骞","王英吉","张超",
+				"崔晋宁","宋悦荣","赵启浩","郭秉霖","卢培钰","周家鑫","王博韬","郝一鹏","张学骞","王英吉","张超",
+				"崔晋宁","宋悦荣","赵启浩","郭秉霖","卢培钰","周家鑫","王博韬","郝一鹏","张学骞","王英吉","张超",
+				"崔晋宁","宋悦荣","赵启浩","郭秉霖","卢培钰","周家鑫","王博韬","郝一鹏","张学骞","王英吉","张超",
+				"崔晋宁","宋悦荣","赵启浩","郭秉霖","卢培钰","周家鑫","王博韬","郝一鹏","张学骞","王英吉","张超",
+				"崔晋宁","宋悦荣","赵启浩","郭秉霖","卢培钰","周家鑫","王博韬","郝一鹏","张学骞","王英吉","张超",
+				"崔晋宁","宋悦荣","赵启浩","郭秉霖","卢培钰","周家鑫","王博韬","郝一鹏","张学骞","王英吉","张超",
+				"崔晋宁","宋悦荣","赵启浩","郭秉霖","卢培钰","周家鑫","王博韬","郝一鹏","张学骞","王英吉","张超",
+				"崔晋宁","宋悦荣","赵启浩","郭秉霖","卢培钰","周家鑫","王博韬","郝一鹏","张学骞","王英吉","张超"
+				);
+		// 
+		var fuck = str[Math.floor(Math.random() * str.length)];
+		document.getElementById("olinr").innerHTML = fuck;
+	}
+	function toStart() {
+		// 启动定时器
+		if (timer == undefined) {
+			button.setAttribute("value", "停止");
+			timer = setInterval(chenge, 3);
+		} else {
+			clearInterval(timer);
+			button.setAttribute("value", "开始");
+			timer = undefined;
+		}
+	}
+ 
+ 
+</script>
+ 
+</html>
